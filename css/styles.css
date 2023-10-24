@@ -422,9 +422,11 @@ body {
 }
 
 .servises-iteam {
-  /* position: relative; */
+  position: relative;
+  flex-direction: column;
   width: 573px;
   min-height: 330px;
+  padding: 191px 126px 35px 44px;
   border: 1px solid #f1f1f1;
   border-radius: 15px;
   background-position: top;
@@ -460,9 +462,10 @@ body {
 }
 
 .servises-title-link {
-  margin: 0;
+  position: relative;
   width: fit-content;
   align-items: center;
+  outline: none;
   column-gap: 15px;
   font-size: 20px;
   font-weight: 500;
@@ -479,24 +482,31 @@ body {
   transition: stroke 0.3s ease-in-out;
 }
 
-.servises-title-link {
-  outline: none;
+.servises-samp {
+  position: relative;
 }
 
-.servises-text::after {
+.servises-samp {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  z-index: -1;
+}
+
+.servises-samp::after {
   position: absolute;
   content: "";
-  outline: none;
   border: 1px solid transparent;
-  top: -240px;
-  right: -135px;;
-  bottom: -43px;
-  left: -53px;
-  z-index: -1;
+  top: -10px;
+  right: -10px;
+  bottom: -10px;
+  left: -10px;
   transition: border-color 0.3s ease-in-out;
 }
 
-.servises-title-link:focus-visible + .servises-text::after {
+.servises-title-link:focus-visible ~ .servises-samp::after {
   border-color: #c93
 }
 
@@ -571,6 +581,7 @@ body {
 
 .advantages-text {
   /* width: 190px; */
+  position: relative;
   padding: 115px 41px 31px 44px;
   text-align: left;
   line-height: 200%;
