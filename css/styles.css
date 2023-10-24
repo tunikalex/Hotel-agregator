@@ -136,7 +136,6 @@ body {
   position: absolute;
   content: "";
   border: 1px solid transparent;
-  border-color: transparent;
   top: -5px;
   right: -5px;
   bottom: -5px;
@@ -310,9 +309,11 @@ body {
 }
 
 .special-offer {
+  position: relative;
+  justify-content: end;
   width: 572px;
   margin-bottom: 23px;
-  justify-content: end;
+  padding: 39px 140px 39px 44px;
   flex-direction: column;
   flex-grow: 1;
   border: 1px solid #f1f1f1;
@@ -325,7 +326,6 @@ body {
 
 .special-offer:last-child {
   margin: 0;
-  fill
 }
 
 .special-offer-lux {
@@ -341,13 +341,6 @@ body {
 .special-offer-maldivs {
   background-image: var(--grad),
     url("../pictures/offer-maldivy.jpg");
-}
-
-.special-text {
-  padding-bottom: 39px;
-  padding-top: 40px;
-  padding-left: 44px;
-  width: 70%;
 }
 
 .special-text-lux {
@@ -375,20 +368,43 @@ body {
 }
 
 .special-offer-link {
-  padding-right: 20px;
+  column-gap: 5px;
+  width: fit-content;
+  outline: none;
   font-size: 16px;
-  width: max-content;
   font-weight: 400;
   color: #f0b050;
-  background-position: right center;
-  background-repeat: no-repeat;
-  background-image: url("../pictures/more-details.svg");
+}
+
+.special-offer-samp::after {
+  position: absolute;
+  content: "";
+  height: inherit;
+  width: inherit;
+  border: 1px solid transparent;
+  top: -10px;
+  right: -10px;
+  bottom: -10px;
+  left: -10px;
+  transition: border-color 0.3s ease-in-out;
+  z-index: -1;
+}
+
+.special-offer-link:focus-visible ~ .special-offer-samp::after  {
+  border-color: #c93;
+}
+
+.special-offer-link:hover {
+  column-gap: 11px;
+}
+
+.special-offer-link:active {
+  color: white;
 }
 
 .special-cost-lux {
   font-size: 30px;
 }
-
 
 /* about-us */
 .about-us {
@@ -447,7 +463,7 @@ body {
   margin: 0;
   width: fit-content;
   align-items: center;
-  column-gap: 5px;
+  column-gap: 15px;
   font-size: 20px;
   font-weight: 500;
   line-height: 200%;
@@ -463,7 +479,28 @@ body {
   transition: stroke 0.3s ease-in-out;
 }
 
-.servises-title-link:hover .servises-title{
+.servises-title-link {
+  outline: none;
+}
+
+.servises-text::after {
+  position: absolute;
+  content: "";
+  outline: none;
+  border: 1px solid transparent;
+  top: -240px;
+  right: -135px;;
+  bottom: -43px;
+  left: -53px;
+  z-index: -1;
+  transition: border-color 0.3s ease-in-out;
+}
+
+.servises-title-link:focus-visible + .servises-text::after {
+  border-color: #c93
+}
+
+.servises-title-link:hover .servises-title {
   color: #f0b050;
 }
 
@@ -480,6 +517,7 @@ body {
 }
 
 .servises-text {
+  position: relative;
   line-height: 200%;
 }
 
