@@ -7,6 +7,9 @@
   <title>Агрегатор отелей</title>
   <link rel="stylesheet" href="./css/normalize.css">
   <link rel="stylesheet" href="./css/styles.css">
+  <link rel="icon" href="./pictures/favicon.ico">
+  <link rel="apple-touch-icon" href="./pictures/favicon.svg">
+  <link rel="icon" href="./pictures/favicon.svg">
 </head>
 
 <body>
@@ -469,8 +472,11 @@
             </div>
           </li>
           <li class="placement-iteam placement-alloptions flex">
-            <a class="placement-link" href="#">
+            <a class="placement-link flex" href="#">
               Посмотреть все варианты
+              <svg width="10" height="18" viewBox="0 0 10 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path class="placement-link-pointer" d="M0.778175 1.22183L8.55635 9L0.778175 16.7782" stroke="none" stroke-width="2"/>
+              </svg>
             </a>
           </li>
         </ul>
@@ -484,7 +490,7 @@
           target="_blank">
           <label class="tour-need-label tour-need-block-sity flex">
             <span class="tour-need-title-text tuor-need-title-city">Город вылета</span>
-            <select class="city" name="city">
+            <select class="tour-form city" name="city">
               <option class="tour-need-option" value="st-petersburg selected">Санкт-Петербург</option>
               <option class="tour-need-option" value="minsk">Минск</option>
               <option class="tour-need-option" value="warszaw">Варшава</option>
@@ -494,7 +500,7 @@
           </label>
           <label class="tour-need-label flex">
             <span class="tour-need-title-text tuor-need-title-country">Страна</span>
-            <select class="country" name="country">
+            <select class="tour-form country" name="country">
               <option value="australia selected">Австралия</option>
               <option value="belarus">Беларусь</option>
               <option value="poland">Польша</option>
@@ -504,15 +510,15 @@
           </label>
           <label class="tour-need-label flex">
             <span class="tour-need-title-text">Дата прибытия</span>
-            <input class="input tour-need-arrayDate" type="date" name="arrayDate" value="2021-10-21">
+            <input class="tour-form input tour-need-array" type="date" name="arrayDate" value="2021-10-21">
           </label>
           <label class="tour-need-label flex">
             <span class="tour-need-title-text">Ночей</span>
-            <input class="input tour-need-num" type="number" name="nights" min="1" max="31" value="6">
+            <input class="tour-form input tour-need-num" type="number" name="nights" min="1" max="31" value="6">
           </label>
           <label class="tour-need-label tour-need-label-last flex">
             <span class="tour-need-title-text">Туристы</span>
-            <input class="input tour-need-num" type="number" name="persons" min="1" max="8" value="2" required>
+            <input class="tour-form input tour-need-num" type="number" name="persons" min="1" max="8" value="2" required>
           </label>
           <button type="submit" class="tour-need-btn button-link orange-text">Найти</button>
         </form>
