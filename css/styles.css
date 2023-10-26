@@ -1,6 +1,6 @@
 @font-face {
-  font-family: "OpenSans";
-  src: local("OpenSans-Bolt"),
+  font-family: "Muller";
+  src: local("Muller-Bolt"),
     url("../fonts/MullerBold.woff2") format("woff2"),
     url("../fonts/MullerBold.woff") format("woff");
   font-weight: 700;
@@ -9,8 +9,8 @@
 }
 
 @font-face {
-  font-family: "OpenSans";
-  src: local("OpenSans-Medium"),
+  font-family: "Muller";
+  src: local("Muller-Medium"),
     url("../fonts/MullerMedium.woff2") format("woff2"),
     url("../fonts/MullerMedium.woff") format("woff");
   font-weight: 500;
@@ -19,8 +19,8 @@
 }
 
 @font-face {
-  font-family: "OpenSuns";
-  src: local("OpenSuns-Regular"),
+  font-family: "Muller";
+  src: local("Muller-Regular"),
     url("../fonts/MullerRegular.woff2") format("woff2"),
     url("../fonts/MullerRegular.woff") format("woff");
   font-weight: 400;
@@ -28,8 +28,8 @@
 }
 
 @font-face {
-  font-family: "OpenSans";
-  src: local("OpenSans-Light"),
+  font-family: "Muller";
+  src: local("Muller-Light"),
     url("../fonts/MullerLight.woff2") format("woff2"),
     url("../fonts/MullerLight.woff") format("woff");
   font-weight: 300;
@@ -58,7 +58,7 @@ img {
 
 body {
   min-width: 1300px;
-  font-family: "OpenSuns", "Arial", "sans-serif";
+  font-family: "Muller", "Arial", "sans-serif";
   line-height: normal;
   background: var(--main-bg-color);
 }
@@ -242,7 +242,7 @@ body {
 .header__phone {
   outline: none;
   margin-right: auto;
-  padding: 5px;
+  padding: 4px;
   border: 1px solid transparent;
   font-size: 20px;
   font-weight: 500;
@@ -415,6 +415,7 @@ body {
   font-size: 16px;
   font-weight: 400;
   color: var(--light-orange);
+  transition: column-gap 0.4s ease-in-out;
 }
 
 .special-offer-samp::after {
@@ -440,6 +441,7 @@ body {
 }
 
 .special-offer-link:active {
+  column-gap: 5px;
   color: white;
 }
 
@@ -507,10 +509,11 @@ body {
   width: fit-content;
   align-items: center;
   outline: none;
-  column-gap: 15px;
+  column-gap: 5px;
   font-size: 20px;
   font-weight: 500;
   line-height: 200%;
+  transition: column-gap 0.4s ease-in-out;
 }
 
 .servises-title {
@@ -551,12 +554,21 @@ body {
   border-color: var(--medium-orange)
 }
 
+
+.servises-title-link:hover {
+  column-gap: 10px;
+}
+
 .servises-title-link:hover .servises-title {
   color: var(--light-orange);
 }
 
 .servises-title-link:hover path {
   stroke: var(--light-orange);
+}
+
+.servises-title-link:active {
+  column-gap: 5px;
 }
 
 .servises-title-link:active .servises-title{
@@ -991,7 +1003,7 @@ body {
 
 .social-media {
   fill: var(--light-gray);
-  transition: fill 0.3s ease-in-out;
+  transition: fill 0.4s ease-in-out;
 }
 
 .social-link:hover path,
